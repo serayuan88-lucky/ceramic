@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sera Ceramics Shop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bar">
+  <div class="wrap">
+    <span class="mark" id="brandMark">Sera Ceramics</span>
+    <button class="basket-btn" id="openBasket" type="button" aria-label="Open basket">Basket <span class="count" id="count">0</span></button>
+  </div>
+</div>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="drop"><span>Drop 01</span><span>November 2026</span><span>Handmade in Barcelona</span></div>
+    <h1>Sera<br><em>Ceramics</em></h1>
+    <div class="intro">
+      <p>Small-batch mugs, bowls and vases, thrown and glazed by hand. Every piece is one of a kind, so the glaze on yours will drip a little differently.</p>
+      <ol class="steps">
+        <li>Browse and add the pieces you love to your basket.</li>
+        <li>Tap “Send order on Instagram”. Your order is copied for you.</li>
+        <li>Paste it in the DM. I'll confirm shipping and payment.</li>
+      </ol>
+    </div>
+      </section>
+
+  <nav class="filters" id="filters" aria-label="Filter by type"></nav>
+  <section class="grid" id="grid" aria-live="polite"></section>
+</main>
+
+<footer class="site">
+  <div class="wrap">Questions? Message me on Instagram <a id="igLink" href="https://ig.me/m/seralucky">@seralucky</a>. Glazes are food safe. Hand-wash recommended.</div>
+</footer>
+
+<div class="scrim" id="scrim"></div>
+
+<aside class="drawer" id="drawer" aria-label="Basket" aria-hidden="true">
+  <header><h2>Your basket</h2><button class="x" type="button" id="closeBasket" aria-label="Close basket">×</button></header>
+  <div class="items" id="items"></div>
+  <footer>
+    <div class="total"><span>Subtotal</span><span id="subtotal">€0</span></div>
+    <p class="small">Shipping is confirmed in the DM.</p>
+    <label for="custName">Your name<input id="custName" type="text" autocomplete="name" placeholder="e.g. Laura"></label>
+    <label for="custCity">Ship to (city, country)<input id="custCity" type="text" placeholder="e.g. Madrid, Spain"></label>
+    <label for="custNote">Note (optional)<textarea id="custNote" rows="2" placeholder="Gift wrap, questions…"></textarea></label>
+    <a class="cta" id="sendBtn" href="https://ig.me/m/seralucky" target="_blank" rel="noopener">Send order on Instagram</a>
+    <p class="copied" id="copied" role="status"></p>
+    <details><summary>Copy didn't work? Copy your order here</summary><textarea id="orderText" rows="7" readonly></textarea></details>
+  </footer>
+</aside>
+
+<div class="dialog" id="dialog" role="dialog" aria-modal="true" aria-labelledby="dTitle">
+  <div class="box">
+    <button class="x" type="button" id="closeDialog" aria-label="Close">×</button>
+    <div class="pic" id="dPic"></div>
+    <div class="info">
+      <h2 id="dTitle"></h2>
+      <div class="price" id="dPrice"></div>
+      <p id="dDesc" style="margin:0"></p>
+      <dl class="specs" id="dSpecs"></dl>
+      <button class="add" type="button" id="dAdd">Add to basket</button>
+    </div>
+  </div>
+</div>
+
+<script src="products.js"></script>
+<script src="shop.js"></script>
+</body>
+</html>
